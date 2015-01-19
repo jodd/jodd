@@ -1,0 +1,3 @@
+[submodule "public/Lab"]
+	path = public/Lab
+	url = https://github.com/jodd/Lab.git
