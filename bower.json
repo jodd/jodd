@@ -1,0 +1,14 @@
+{
+  "name": "jodd.net",
+  "version": "0.0.0",
+  "homepage": "http://jodd.net",
+  "authors": [
+    "Joris Durand <contact@jodd.net>"
+  ],
+  "description": "Personal website",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}

@@ -1,0 +1,14 @@
+extend layout
+
+block content
+  article
+    header: h2 Information
+    include:markdown index.md
+
+block aside
+  aside
+    ul
+      li: a(href='https://github.com/jodd') Github
+      li: a(href='http://fr.linkedin.com/pub/joris-durand/25/8bb/662/') LinkedIn
+      li: a(href='/lab') Labo
+      li: a(href='mailto:contact@jodd.net') contact@jodd.net
