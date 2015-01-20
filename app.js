@@ -13,4 +13,6 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-app.listen(3000);
+var PORT = app.get('env') === 'production' ? 8080 : 3000;
+
+app.listen(PORT);
