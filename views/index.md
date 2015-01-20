@@ -1,6 +1,6 @@
 <!-- ## Information -->
 
-Je suis intégrateur/développeur front-end. Autrement dit, je fais des interfaces web en HTML, CSS et Javascript.
+Je suis intégrateur / développeur front-end. Autrement dit, je fais des interfaces web en HTML, CSS et Javascript.
 
 Soucieux de l'expérience utilisateur et sensible à l'accessibilité numérique, j'aime faire des interfaces simples, ergonomiques et intuitives.
 Je suis également adepte des bonnes pratiques et je m'efforce de produire un code respectueux des standards et performant.  
