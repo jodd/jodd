@@ -496,8 +496,7 @@ textarea {
   color: #4d4d4d; }
 
 html {
-  font-size: 62.5%;
-  line-height: 1.5;
+  font: 62.5%/1.5 bitter, serif;
   min-height: 100%; }
 
 br {
@@ -629,7 +628,6 @@ textarea {
 /* Layout
    -------------------------------------------------------------------------- */
 html {
-  font-family: bitter, serif;
   background: black url(img/concrete.png);
   border-top: 6px solid #f5993d;
   position: relative; }
@@ -679,26 +677,25 @@ body > header {
   [role="main"] > aside {
     margin: 2em; }
     [role="main"] > aside ul {
+      display: table;
       font-size: 1.2em;
       list-style: none;
       padding: 0;
-      margin: 0; }
-      [role="main"] > aside ul li + li {
-        margin-top: 1em; }
+      margin: 0 auto; }
+    [role="main"] > aside li + li {
+      margin-top: 1em; }
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 45em) {
-  /* Layout
-     -------------------------------------------------------------------------- */
-  body {
-    font-size: 1.8em; }
-
-  /* Header
-     -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+    40
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 40em) {
+  /*  Header
+     ---------------------------------- */
   body > header {
     font-size: 1em;
     width: 80%;
@@ -707,15 +704,39 @@ body > header {
     body > header h1 span {
       font-size: 2em; }
 
+  /*  Main
+     ---------------------------------- */
+  [role="main"] {
+    width: 80%;
+    max-width: 1024px;
+    margin: 3em auto; }
+    [role="main"] > article {
+      margin: 0 -1.5em;
+      padding: 1.5em;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px black; }
+    [role="main"] > aside {
+      margin: 2em 0; }
+      [role="main"] > aside li {
+        display: inline-block;
+        width: 40%;
+        margin: 0 0 0 10%; }
+      [role="main"] > aside li + li {
+        margin-top: 0; }
+      [role="main"] > aside li:nth-child(n+3) {
+        margin-top: 1em; } }
+/* --------------------------------------------------------------------------
+    60
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 60em) {
+  /*  Main
+     ---------------------------------- */
   [role="main"] {
     /*
      * For IE 6/7 only
      * Include this rule to trigger hasLayout and contain floats.
      */
-    *zoom: 1;
-    width: 80%;
-    max-width: 1024px;
-    margin: 3em auto; }
+    *zoom: 1; }
     [role="main"]:before, [role="main"]:after {
       content: " ";
       /* 1 */
@@ -725,15 +746,19 @@ body > header {
       clear: both; }
     [role="main"] > article {
       float: left;
-      width: 65%;
-      margin-left: -1.5em;
-      padding: 1.5em;
-      border-radius: 2px;
-      box-shadow: 0 1px 2px black; }
+      width: 65%; }
     [role="main"] > aside {
       float: right;
       width: 30%;
-      margin: 0; } }
+      margin: 0; }
+      [role="main"] > aside li {
+        display: block;
+        width: auto; }
+      [role="main"] > aside li + li {
+        margin-top: 1em; } }
+/* ==========================================================================
+    PRINT
+   ========================================================================== */
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 

@@ -12,7 +12,6 @@
    -------------------------------------------------------------------------- */
 
 html {
-  font-family: bitter, serif;
   background: black url(img/concrete.png);
   border-top: 6px solid $light-orange;
   position: relative;
@@ -72,14 +71,13 @@ body > header {
   > aside {
     margin: 2em;
     ul {
+      display: table;
       font-size: 1.2em;
       list-style: none;
       padding: 0;
-      margin: 0;
-      li + li {
-        margin-top: 1em;
-      }
+      margin: 0 auto;
     }
+    li + li { margin-top: 1em; }
   }
 }
 
@@ -91,17 +89,15 @@ body > header {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 45em) {
 
-/* Layout
+/* --------------------------------------------------------------------------
+    40
    -------------------------------------------------------------------------- */
 
-body {
-  font-size: 1.8em;
-}
+@media only screen and (min-width: 40em) {
 
-/* Header
-   -------------------------------------------------------------------------- */
+/*  Header
+   ---------------------------------- */
 
 body > header {
   font-size: 1em;
@@ -111,28 +107,68 @@ body > header {
   h1 span { font-size: 2em; }
 }
 
+/*  Main
+   ---------------------------------- */
 
 [role="main"] {
-  @include clearfix;
   width: 80%;
   max-width: 1024px;
   margin: 3em auto;
   > article {
-    float: left;
-    width: 65%;
-    margin-left: -1.5em;
+    margin: 0 -1.5em;
     padding: 1.5em;
     border-radius: 2px;
     box-shadow: 0 1px 2px black;
   }
   > aside {
-    float: right;
-    width: 30%;
-    margin: 0;
+    margin: 2em 0;
+    li {
+      display: inline-block;
+      width: 40%;
+      margin: 0 0 0 10%;
+    }
+    li + li { margin-top: 0; }
+    li:nth-child(n+3) { margin-top: 1em; }
   }
 }
 
 }
+
+
+/* --------------------------------------------------------------------------
+    60
+   -------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 60em) {
+
+/*  Main
+   ---------------------------------- */
+
+[role="main"] {
+  @include clearfix;
+  > article {
+    float: left;
+    width: 65%;
+  }
+  > aside {
+    float: right;
+    width: 30%;
+    margin: 0;
+    li {
+      display: block;
+      width: auto;
+    }
+    li + li { margin-top: 1em; }
+  }
+}
+
+}
+
+
+
+/* ==========================================================================
+    PRINT
+   ========================================================================== */
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
