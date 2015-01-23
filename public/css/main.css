@@ -505,17 +505,20 @@ br {
 a {
   color: #e67300;
   text-decoration: none;
-  border-bottom: 1px solid #e67300; }
+  border-bottom: 1px solid #e67300;
+  transition: color .3s;
+  outline: 0; }
   a:visited {
     color: #e67300; }
   a:focus, a:hover {
-    color: #f5993d;
-    border-bottom: 2px solid #f5993d; }
+    color: #f5b83d;
+    border-bottom: 2px solid #f5b83d; }
 
 [href^="mailto:"]:before {
   font-family: 'icons';
   content: "";
   speak: none;
+  font-size: .9em;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -530,6 +533,7 @@ a {
   font-family: 'icons';
   content: "";
   speak: none;
+  font-size: .9em;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -544,6 +548,7 @@ a {
   font-family: 'icons';
   content: "";
   speak: none;
+  font-size: .9em;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -558,6 +563,7 @@ a {
   font-family: 'icons';
   content: "";
   speak: none;
+  font-size: .9em;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -629,7 +635,7 @@ textarea {
    -------------------------------------------------------------------------- */
 html {
   background: black url(img/concrete.png);
-  border-top: 6px solid #f5993d;
+  border-top: 6px solid #e67300;
   position: relative; }
   html:after {
     content: "";
