@@ -634,28 +634,31 @@ textarea {
 /* Layout
    -------------------------------------------------------------------------- */
 html {
-  background: black url(img/concrete.png);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 300px, transparent), url(img/concrete.jpg);
   border-top: 6px solid #e67300;
   position: relative; }
   html:after {
     content: "";
-    background: url(img/sidewalk.png) repeat-x;
-    height: 155px;
+    background: url(img/sidewalk.png) bottom repeat-x;
     position: absolute;
+    top: 0;
     right: 0;
     bottom: 0;
-    left: 0; }
+    left: 0;
+    z-index: 0; }
 
 body {
   font-size: 1.8em;
-  margin: 6px 0 210px; }
+  margin: 6px 0 210px;
+  position: relative;
+  z-index: 1; }
 
 /* Header
    -------------------------------------------------------------------------- */
 body > header {
   font-size: .75em;
   color: #e6e6e6;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 0 black;
   margin: 1.5em 1em; }
   body > header h1 {
     font-weight: normal;
@@ -671,7 +674,7 @@ body > header {
   margin: 2em auto 0; }
   [role="main"] > article {
     background: #e6e6e6 url(img/paper.png);
-    box-shadow: 0 0 3px black;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
     padding: .9em; }
     [role="main"] > article header {
       text-align: center; }
@@ -681,10 +684,11 @@ body > header {
       display: inline-block;
       border-bottom: 3px solid #4d4d4d; }
   [role="main"] > aside {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.45);
     margin-top: 3em; }
     [role="main"] > aside ul {
       display: table;
-      font-size: 1.2em;
       list-style: none;
       padding: 0;
       margin: 0 auto; }
@@ -700,6 +704,14 @@ body > header {
     40
    -------------------------------------------------------------------------- */
 @media only screen and (min-width: 40em) {
+  /*  Layout
+     ---------------------------------- */
+  html:after {
+    background: url(img/letterbox.png) left 120% bottom 90px no-repeat, url(img/sidewalk.png) bottom repeat-x; }
+
+  body {
+    margin-bottom: 240px; }
+
   /*  Header
      ---------------------------------- */
   body > header {
@@ -720,10 +732,12 @@ body > header {
       margin: 0 -1.5em;
       padding: 1.5em;
       border-radius: 2px; }
+    [role="main"] > aside ul {
+      display: block;
+      margin-right: 30%; }
     [role="main"] > aside li {
       display: inline-block;
-      width: 40%;
-      margin: 0 0 0 10%; }
+      width: 50%; }
     [role="main"] > aside li + li {
       margin-top: 0; }
     [role="main"] > aside li:nth-child(n+3) {
@@ -732,6 +746,11 @@ body > header {
     60
    -------------------------------------------------------------------------- */
 @media only screen and (min-width: 60em) {
+  /*  Layout
+     ---------------------------------- */
+  html:after {
+    background-position: right 12% bottom 96px, bottom; }
+
   /*  Main
      ---------------------------------- */
   [role="main"] {
@@ -749,7 +768,8 @@ body > header {
       clear: both; }
     [role="main"] > article {
       float: left;
-      width: 65%; }
+      width: 65%;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75); }
     [role="main"] > aside {
       float: right;
       width: 30%;
@@ -762,6 +782,14 @@ body > header {
         width: auto; }
       [role="main"] > aside li + li {
         margin-top: 1em; } }
+/* --------------------------------------------------------------------------
+    90
+   -------------------------------------------------------------------------- */
+@media only screen and (min-width: 90em) {
+  /*  Layout
+     ---------------------------------- */
+  html:after {
+    background: url(img/letterbox.png) right 210px bottom 96px no-repeat, url(img/graff.png) left -240px bottom 180px no-repeat, url(img/sidewalk.png) bottom repeat-x; } }
 /* ==========================================================================
     PRINT
    ========================================================================== */
