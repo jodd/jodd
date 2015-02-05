@@ -14,7 +14,8 @@
 html {
   background:
     linear-gradient(to top, rgba(0,0,0,.45), transparent 300px, transparent),
-    url(img/concrete.jpg);
+    url(img/concrete.jpg),
+    #5c5c5c;
   border-top: 6px solid $orange;
   position: relative;
   &:after {
