@@ -1,3 +1,3 @@
 # jodd.net
 
-Source code of my ~~[personal website](http://jodd.net)~~ old website.
+Source code of my ~~personal website~~ old website.
